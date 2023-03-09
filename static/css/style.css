@@ -1,0 +1,202 @@
+:root {
+    --color-primary: #3399cc;
+    --color-text: #555;
+    --font-main: Gantari-Regular;
+    --font-text: Gantari-Bold;
+}
+
+/* Main settings */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-text);
+    color: var(--color-text);
+}
+
+@font-face {
+    font-family: Gantari-Regular;
+    src: url(../fonts/Gantari-Regular.ttf);
+}
+
+@font-face {
+    font-family: Gantari-Bold;
+    src: url(../fonts/Gantari-Bold.ttf);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-main);
+}
+
+/* -------------- */
+
+/* Layout settings */
+
+body {
+    background-color: #eaebec;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 80px;
+    background-color: var(--color-primary);
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90vw;
+    list-style-type: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #eee;
+    text-transform: uppercase;
+    font-family: var(--font-main);
+    padding: 10px;
+}
+
+nav ul li a:hover {
+    color: #ddd;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    margin: 50px;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--color-text);
+    width: 50%;
+    list-style-type: none;
+}
+
+.list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 15px;
+    border-bottom: 1px solid var(--color-text);
+}
+
+.btn {
+    padding: 8px 6px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.btn-view {
+    background-color: #007bff;
+    color: #f8f9fa;
+}
+
+.btn-view:hover {
+    background-color: #007bffcc;
+}
+
+.btn-edit {
+    background-color: #6c757d;
+    color: #f8f9fa;
+}
+
+.btn-edit:hover {
+    background-color: #6c757dcc;
+}
+
+.btn-delete {
+    background-color: #dc3545;
+    color: #f8f9fa;
+}
+
+.btn-delete:hover {
+    background-color: #dc3545cc;
+}
+
+.list li:last-child {
+    border-bottom: 0;
+}
+
+.search {
+    margin: 20px;
+    width: 47.5%;
+}
+
+.search-input {
+    padding: 8px;
+    width: 80%;
+}
+
+.btn-search {
+    background-color: #aaa;
+    color: #f8f9fa;
+    width: 17.5%;
+    outline: none;
+    border: 0;
+    box-shadow: 0;
+    cursor: pointer;
+}
+
+.btn-search:hover {
+    background-color: #bbb;
+}
+
+.aux-btns {
+    display: flex;
+    justify-content: flex-start;
+    width: 50%;
+    margin: 10px;
+}
+
+.aux-btns a {
+    padding: 6px;
+    margin: 4px;
+    background-color: #aaa;
+    color: #f8f9fa;
+    text-decoration: none;
+}
+
+/* -------------- */
+
+/* Index settings */
+
+.cards {
+    display: flex;
+    justify-content: space-around;
+}
+
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 300px;
+    margin: 30px;
+    border-radius: 10px;
+    background-color: var(--color-primary);
+    color: #eee;
+    font-size: 2rem;
+    text-decoration: none;
+        transition: background-color .3s;
+}
+
+.card:hover {
+    cursor: pointer;
+    background-color: #3399cccc;
+        transition: background-color .2s;
+}
+
+.search-by {
+    text-align: center;
+}

@@ -1,0 +1,17 @@
+{% extends 'layouts/base.html' %}
+
+{% block 'title' %}Contact: {{ contact.first_name }} {{ contact.last_name }}{% endblock%}
+
+{% block 'content' %}
+    <span class="aux-btns"><a href="{% url 'contact' %}">Go back</a></span>
+    <ul class="list">
+        <li>First name: {{ contact.first_name }}</li>
+        <li>Last name: {{ contact.last_name }}</li>
+        <li>Email: {{ contact.email }}</li>
+        <li>Phone number 1: {{ contact.phone_num1 }}</li>
+        <li>Phone number 2: {{ contact.phone_num2 }}</li>
+        <li>Company: {{ contact.company }}</li>
+        <li>Join date: {{ contact.join_date }}</li>
+        <li>Notes: {{ contact.notes }}</li>
+    </ul>
+{% endblock %}

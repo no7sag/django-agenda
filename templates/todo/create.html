@@ -1,0 +1,29 @@
+{% extends 'layouts/base.html' %}
+
+{% block 'title' %}Create to do{% endblock %}
+
+{% block 'styles' %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/forms.css' %}">
+{% endblock %}
+
+{% block 'content' %}
+    {% if messages %}
+    <ul class="messages">
+        {% for message in messages %}
+            <li{% if message.tags %} class="msg-success"{% endif %}>{{ message }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+
+    <span class="aux-btns-form"><a href="{% url 'todo' %}">Go back</a></span>
+    <form action="{% url 'todo_create' %}" method="POST">
+        {% csrf_token %}
+        <table>
+            {{ form.as_table }}
+        </table>
+        <div class="btn-container">
+            <input type="submit" action="" value="Save" class="btn-save">
+        </div>
+    </form>
+{% endblock %}

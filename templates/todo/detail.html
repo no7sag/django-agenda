@@ -1,0 +1,13 @@
+{% extends 'layouts/base.html' %}
+
+{% block 'title' %}To Do: {{ todo.title }}{% endblock%}
+
+{% block 'content' %}
+    <span class="aux-btns"><a href="{% url 'todo' %}">Go back</a></span>
+    <ul class="list">
+        <li>Title: {{ todo.title }}</li>
+        <li>Description: {{ todo.description }}</li>
+        <li>End date: {{ todo.end_date }}</li>
+        <li>Priority: {{ todo.priority }}</li>
+    </ul>
+{% endblock  %}

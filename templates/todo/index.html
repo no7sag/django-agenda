@@ -1,0 +1,24 @@
+{% extends 'layouts/base.html' %}
+
+{% block 'title' %}To Do's{% endblock %}
+
+{% block 'content' %}
+    <h1>To do's</h1>
+
+    {% include 'todo/partials/search.html' %}
+
+    <span class="aux-btns"><a href="{% url 'todo' %}">View all</a> <a href="{% url 'todo_create' %}">+ Add to do</a></span>
+    <ul class="list">
+        {% for todo in todos %}
+            <li>{{ todo }}
+            <span>
+                <a href="{% url 'todo_view' id=todo.id %}" class="btn btn-view">View</a>
+                <a href="{% url 'todo_edit' id=todo.id %}" class="btn btn-edit">Edit</a>
+                <a href="{% url 'todo_delete' id=todo.id %}" class="btn btn-delete">Delete</a>
+            </span>
+            </li>
+        {% empty %}
+            <li>No results found. Please try adding a new one.</li>
+        {% endfor %}
+    </ul>
+{% endblock %}

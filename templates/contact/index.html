@@ -1,0 +1,25 @@
+{% extends 'layouts/base.html' %}
+
+{% block 'title' %}Contacts{% endblock %}
+
+{% block 'content' %}
+    <h1>Contacts</h1>
+
+    {% include 'contact/partials/search.html' %}
+    {% include 'contact/partials/search_by_initial.html' %}
+    
+    <span class="aux-btns"><a href="{% url 'contact' %}">View all</a> <a href="{% url 'contact_create' %}">+ Add contact</a></span>
+    <ul class="list">
+        {% for contact in contacts %}
+            <li>{{ contact }}
+            <span>
+                <a href="{% url 'contact_view' id=contact.id %}" class="btn btn-view">View</a>
+                <a href="{% url 'contact_edit' id=contact.id %}" class="btn btn-edit">Edit</a>
+                <a href="{% url 'contact_delete' id=contact.id %}" class="btn btn-delete">Delete</a>
+            </span>
+            </li>
+        {% empty %}
+            <li>No results found. Please try adding a new one.</li>
+        {% endfor %}
+    </ul>
+{% endblock %}
