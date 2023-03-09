@@ -24,3 +24,8 @@ DATABASES = {
 To run it, type `python manage.py runserver` in your terminal of the Django project.
 
 The server will start running the server at `localhost port 8000 (127.0. 0.1:8000)`.
+
+### Screenshots
+![Contacts list](https://github.com/no7sag/django-agenda/blob/master/preview/ss1.jpg)
+![Contact details](https://github.com/no7sag/django-agenda/blob/master/preview/ss2.jpg)
+![To do list](https://github.com/no7sag/django-agenda/blob/master/preview/ss3.jpg)
